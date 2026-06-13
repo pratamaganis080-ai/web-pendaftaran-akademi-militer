@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satuan Kavaleri - Akademi Militer Roblox</title>
+    <style>
+      :root {
+        --bg-main: #0c0e0d;
+        --bg-card: #151816;
+        --tni-gold: #d4af37;
+        --text-pure: #ffffff;
+        --text-body: #cfd4d0;
+        --text-muted: #8e9590;
+        --border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          "Segoe UI",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-main);
+        color: var(--text-body);
+        line-height: 1.8;
+        padding: 60px 20px;
+      }
+
+      .wiki-container {
+        max-width: 1050px;
+        margin: 0 auto;
+      }
+
+      .btn-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: transparent;
+        color: var(--tni-gold);
+        border: 1px solid var(--tni-gold);
+        padding: 10px 20px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        margin-bottom: 40px;
+        transition: all 0.2s ease;
+      }
+
+      .btn-back:hover {
+        background-color: var(--tni-gold);
+        color: #000000;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+      }
+
+      h1 {
+        color: var(--text-pure);
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .wiki-top-layout {
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        gap: 40px;
+        align-items: start;
+      }
+
+      .wiki-text {
+        font-size: 1.1rem;
+        text-align: justify;
+      }
+
+      .wiki-text p {
+        margin-bottom: 24px;
+        color: var(--text-body);
+      }
+
+      .wiki-text p:first-of-type::first-letter {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--tni-gold);
+      }
+
+      h2.wiki-section-title {
+        color: var(--text-pure);
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin: 40px 0 20px 0;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      h3.wiki-subsection-title {
+        color: var(--tni-gold);
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 20px 0 10px 0;
+      }
+
+      /* INFOBOX */
+      .infobox {
+        background-color: var(--bg-card);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .infobox-title {
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: var(--tni-gold);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+      }
+
+      .infobox-img-container {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.02);
+        padding: 20px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        border: 1px dashed rgba(255, 255, 255, 0.05);
+      }
+
+      .infobox-img {
+        max-width: 120px;
+        height: auto;
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
+      }
+
+      .infobox-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .infobox-table tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      }
+
+      .infobox-table tr:last-child {
+        border-bottom: none;
+      }
+
+      .infobox-table th,
+      .infobox-table td {
+        padding: 12px 4px;
+        font-size: 0.9rem;
+        vertical-align: top;
+      }
+
+      .infobox-table th {
+        text-align: left;
+        width: 40%;
+        color: var(--text-muted);
+        font-weight: 600;
+      }
+
+      .infobox-table td {
+        color: var(--text-pure);
+      }
+
+      /* TABEL NAMA TARUNA  */
+      .full-width-section {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .data-table-container {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 15px;
+        border-radius: 6px;
+        border: 1px solid var(--border-color);
+      }
+
+      .wiki-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: var(--bg-card);
+        font-size: 0.95rem;
+      }
+
+      .wiki-table th,
+      .wiki-table td {
+        padding: 14px 18px;
+        text-align: left;
+      }
+
+      .wiki-table th {
+        background-color: rgba(255, 255, 255, 0.02);
+        color: var(--tni-gold);
+        font-weight: 700;
+        border-bottom: 2px solid var(--border-color);
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+      }
+
+      .wiki-table tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      }
+
+      .wiki-table tr:last-child {
+        border-bottom: none;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 4px 10px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        border-radius: 4px;
+        text-transform: uppercase;
+      }
+      .badge-kopassus {
+        background-color: rgba(220, 53, 69, 0.12);
+        color: #ff4d5e;
+        border: 1px solid rgba(220, 53, 69, 0.25);
+      }
+      .badge-kostrad {
+        background-color: rgba(40, 167, 69, 0.12);
+        color: #2ecc71;
+        border: 1px solid rgba(40, 167, 69, 0.25);
+      }
+
+      .badge-kavaleri {
+        background-color: rgba(142, 149, 144, 0.12);
+        color: #b0b7b2;
+        border: 1px solid rgba(142, 149, 144, 0.25);
+      }
+
+      .badge-penerbad {
+        background-color: rgba(128, 0, 32, 0.15);
+        color: #ff4d6d;
+        border: 1px solid rgba(128, 0, 32, 0.3);
+      }
+
+      .badge-pomad {
+        background-color: rgba(0, 123, 255, 0.12);
+        color: #00bacf;
+        border: 1px solid rgba(0, 123, 255, 0.25);
+      }
+
+      /* RESPONSIV HP */
+      @media (max-width: 850px) {
+        .wiki-top-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .infobox {
+          width: 100%;
+          order: -1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wiki-container">
+      <a href="/index.html" class="btn-back">⬅ Kembali ke Beranda</a>
+
+      <h1>Korps Kavaleri (KAV)</h1>
+
+      <div class="wiki-top-layout">
+        <div class="wiki-text">
+          <p>
+            <b>Kavaleri</b> adalah unit pasukan kavaleri Tentara Nasional
+            Indonesia (TNI). Berbeda dengan Batalyon Infanteri, Batalyon Korps
+            Kavaleri tidak selalu terdiri dari 600-1000 personel. Ukuran
+            Batalyon bagi Korps Kavaleri yang menggunakan Baret Hitam ini
+            biasanya menggunakan jumlah kendaraan yang dimiliki, terdiri dari
+            sekian tank atau sekian panser. Misalnya, pada Batalyon Kavaleri di
+            lingkungan Kostrad, satu peleton kavaleri terdiri atas 3 tank FV 101
+            Scorpion dan 1 tank Stormer APC. Lebih jauh, tiga peleton membentuk
+            satu kompi, dan akhirnya tiga kompi membentuk satu batalyon.
+          </p>
+
+          <h2 class="wiki-section-title">Satuan Penempatan Utama</h2>
+          <p>
+            Setelah menyelesaikan pendidikan kedinasan di Akademi Militer, para
+            perwira muda lulusan Korps Infanteri sebagian besar akan
+            didistribusikan ke dua Komando Utama (Kotama) tempur elite milik TNI
+            Angkatan Darat, yaitu:
+          </p>
+
+          <h3 class="wiki-subsection-title">
+            1. Kostrad Kavaleri (Komando Pasukan Khusus)
+          </h3>
+          <p>
+            Kostrad merupakan komando utama operasi se-tingkat Kotama yang
+            bertugas menyelenggarakan operasi pertahanan tingkat strategis
+            sesuai dengan kebijakan Panglima TNI, kostrad juga memiliki pasukan
+            Kavaleri yaitu Yonkav 1/BCC.
+          </p>
+
+          <!-- <h3 class="wiki-subsection-title">
+            2. Kostrad (Komando Cadangan Strategis AD)
+          </h3>
+          <p>
+            Kostrad merupakan komando utama operasi se-tingkat Kotama yang
+            bertugas menyelenggarakan operasi pertahanan tingkat strategis
+            sesuai dengan kebijakan Panglima TNI. Kostrad memiliki basis pasukan
+            terbesar di Korps Infanteri yang terbagi dalam tiga Divisi Infanteri
+            (Divif 1, Divif 2, dan Divif 3).
+          </p> -->
+        </div>
+
+        <div class="infobox">
+          <div class="infobox-title">Korps Kavaleri</div>
+          <div class="infobox-img-container">
+            <img
+              src="/kavaleri/LOGO_KAVALERI.png"
+              alt="Lambang Kavaleri"
+              class="infobox-img"
+            />
+          </div>
+          <table class="infobox-table">
+            <tr>
+              <th>Peran</th>
+              <td>
+                Mobilitas tinggi, daya tembak (firepower), dan perlindungan
+                (proteksi).
+              </td>
+            </tr>
+            <tr>
+              <th>Semboyan</th>
+              <td>Tri Daya Cakti</td>
+            </tr>
+            <tr>
+              <th>Warna Korps</th>
+              <td>Hitam</td>
+            </tr>
+            <tr>
+              <th>Kendaraan Utama</th>
+              <td>Leopard 2RI</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="full-width-section">
+        <h2 class="wiki-section-title">
+          Daftar Penempatan Taruna (Korps Kavaleri)
+        </h2>
+        <p>
+          Berikut adalah daftar nama Taruna Akademi Militer tingkat akhir Korps
+          Kavaleri beserta proyeksi kesatuan penempatan dinas pertamanya:
+        </p>
+
+        <div class="data-table-container">
+          <table class="wiki-table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Taruna</th>
+                <th>No. Akademi</th>
+                <th>Satuan Proyeksi</th>
+                <th>Pangkat Awal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>prabowosubianto051</td>
+                <td>2023.1</td>
+                <td><span class="badge badge-kavaleri">Kavaleri</span></td>
+                <td>Letda Inf</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>
+                  <span class="badge badge-kavaleri">-</span>
+                </td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+                <td>
+                  <span class="badge badge-kostrad">-</span>
+                </td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

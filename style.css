@@ -338,37 +338,78 @@ body {
   margin-top: 30px;
 }
 
-.angkatan-box {
-  margin-top: 45px;
+.korps-section {
+  background-color: #1a1d1b;
+  padding: 60px 0 80px 0;
+  border-top: 1px dashed rgba(255, 255, 255, 0.05);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
 }
 
-.korps-container h2 {
-  color: #ffffff;
-  font-size: 1.8rem;
+.container-korps {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: left;
+}
+
+.section-title-korps {
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
-.korps-container {
+.section-subtitle-korps {
+  color: #8e9590;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.korps-buttons-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 16px;
 }
 
 .korps-btn {
   display: inline-block;
-  background-color: var(--secondary-green, #005c29);
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
+  background-color: #005c29;
+  color: #ffffff !important;
+  padding: 12px 28px;
+  text-decoration: none !important;
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 600;
-  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .korps-btn:hover {
-  transform: translateY(-2);
+  background-color: #007d37;
+  border-color: #ffff00;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 92, 41, 0.4);
+}
+
+/* RESPONSIVE DI HANDPHONE */
+@media (max-width: 768px) {
+  .korps-section {
+    padding: 50px 0;
+  }
+
+  .korps-buttons-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .korps-btn {
+    text-align: center;
+    padding: 12px 10px;
+    font-size: 0.95rem;
+  }
 }
 
 /* GRID */
@@ -636,119 +677,6 @@ body {
   }
 }
 /* TINGAKATAN END */
-
-/* PEJABAT START */
-.pejabat-section {
-  background-color: var(--bg-dark);
-  padding: 80px 0;
-}
-
-/* Header Text di Tengah */
-.pejabat-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-title-center {
-  font-size: 2.2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--text-main);
-  margin-bottom: 10px;
-}
-
-.section-subtitle {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-}
-
-/* GRID SYSTEM: Mengunci posisi agar 2 kolom simetris di laptop */
-.pejabat-grid {
-  display: grid;
-  grid-template-columns: repeat(
-    2,
-    1fr
-  ); /* Membagi 2 kolom sama rata kiri-kanan */
-  gap: 30px; /* Jarak antar card biar gak dempetan */
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* CARD LOOK PREMIUM */
-.pejabat-card {
-  background-color: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  border-left: 4px solid var(--tni-green); /* Aksen garis hijau taktis di sisi kiri card */
-  border-radius: 8px;
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.pejabat-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(
-    212,
-    175,
-    55,
-    0.3
-  ); /* Garis luar berubah emas tipis saat disorot */
-}
-
-/* Wadah Foto Bingkai Presisi */
-.pejabat-img-wrapper {
-  width: 90px;
-  height: 120px;
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px dashed rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0; /* Menjaga ukuran wadah foto tidak mencengkong */
-}
-
-.pejabat-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Foto otomatis memotong pas menyesuaikan bingkai */
-}
-
-/* Informasi Text di dalam Card */
-.pejabat-info h3 {
-  color: var(--text-main);
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 6px;
-}
-
-.pejabat-role {
-  color: var(
-    --gold-attribute
-  ); /* Text peran diubah ke warna emas atribut biar mewah */
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-/* RESPONSIF: Otomatis jadi 1 kolom berurutan ke bawah kalau dibuka di HP */
-@media (max-width: 768px) {
-  .pejabat-grid {
-    grid-template-columns: 1fr;
-    padding: 0 16px;
-  }
-
-  .pejabat-card {
-    padding: 20px;
-    gap: 16px;
-  }
-}
 
 /* PENDAFTARAN START */
 .pendaftaran-section {

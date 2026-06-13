@@ -49,17 +49,16 @@ revealElements.forEach((element) => {
   itemObserver.observe(element);
 });
 
-// --- 4. LOGIKA DROPDOWN MENU ABOUT ---
+// DROPDOWN START
 const dropdownToggle = document.querySelector(".dropdown-toggle");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 
 dropdownToggle.addEventListener("click", (e) => {
   e.preventDefault();
-  e.stopPropagation(); // Mencegah bubbling event klik ke dokumen luar
+  e.stopPropagation();
   dropdownMenu.classList.toggle("show-dropdown");
 });
 
-// Otomatis tutup dropdown jika user mengklik area kosong mana saja di luar menu
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".dropdown")) {
     dropdownMenu.classList.remove("show-dropdown");
@@ -72,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nestedTrigger = document.querySelector(".nested-trigger");
   const nestedMenu = document.querySelector(".nested-menu");
 
-  // 1. Fungsi Klik Hamburger Menu di Mobile
+  // FUNGSI DI MOBILE HAMBURGER MENU
   if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener("click", function () {
       navLinks.classList.toggle("active");
@@ -91,17 +90,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 2. Logika khusus klik "Korps Pendidikan" pas di layar Handphone
+  // KORPS PENDIDIKAN PAS DIKLIK
   if (nestedTrigger) {
     nestedTrigger.addEventListener("click", function (e) {
       if (window.innerWidth <= 768) {
-        e.preventDefault(); // Mencegah reload halaman
-        nestedMenu.classList.toggle("show-mobile"); // Buka-tutup dropdown bawah di HP
+        e.preventDefault();
+        nestedMenu.classList.toggle("show-mobile");
       }
     });
   }
 
-  // Menutup menu mobile otomatis jika salah satu link final di-klik
   const navItems = document.querySelectorAll(
     ".nav-links a:not(.dropdown-trigger):not(.nested-trigger)",
   );
