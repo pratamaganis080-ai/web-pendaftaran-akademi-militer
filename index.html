@@ -17,8 +17,24 @@
         <a href="#" class="logo">Akmil</a>
         <ul class="nav-links" id="navLinks">
           <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#tingkatan">Tingkatan</a></li>
+          <li>
+            <a href="#about" class="dropdown-toggle">About</a>
+            <ul class="dropdown-menu">
+              <li class="nested-dropdown">
+                <a href="#" class="nested-trigger">Korps Pendidikan ▸</a>
+
+                <ul class="nested-menu">
+                  <li><a href="infanteri.html">Infanteri</a></li>
+                  <li><a href="#">Kavaleri</a></li>
+                  <li><a href="#">Polisi Militer</a></li>
+                  <li><a href="#">Penerbad</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#tingkatan">Tingkatan</a></li>
+              <li><a href="#pejabat">Daftar Pejabat</a></li>
+            </ul>
+          </li>
           <li><a href="#syarat">Syarat</a></li>
           <li><a href="#galery">Galery</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -35,13 +51,14 @@
     <!-- HERO START -->
     <section id="home" class="hero">
       <div class="hero-content">
-        <img src="" alt="" />
+        <div class="hero-logo-container">
+          <img src="image/5.png" alt="" class="hero-logo" />
+        </div>
         <h1>
           Halo, Welcome to
-          <span class="highlight-text">RI | AKADEMI MILITER</span>
+          <span class="highlight-yellow">RI | AKADEMI MILITER</span>
         </h1>
-        <p></p>
-        <a href="#syarat" class="btn-cta">Lihat Syarat</a>
+        <a href="#syarat" class="btn-lihat-syarat">Lihat Syarat</a>
       </div>
     </section>
     <!-- HERO END -->
@@ -61,12 +78,17 @@
             </p>
           </div>
           <div class="angkatan-box">
-            <h3>Korps Pendidikan</h3>
-            <div class="tingkatan-tags">
-              <span>Infanteri</span>
-              <span>Kavaleri</span>
-              <span>Polisi Militer</span>
-              <span>Penerbad</span>
+            <div class="korps-container">
+              <h2>Korps Pendidikan</h2>
+              <a
+                href="/infanteri/infanteri.html"
+                target="_blank"
+                class="korps-btn"
+                >Infanteri</a
+              >
+              <a href="#" class="korps-btn">Kavaleri</a>
+              <a href="#" class="korps-btn">Polisi Militer</a>
+              <a href="#" class="korps-btn">Penerbad</a>
             </div>
           </div>
         </div>
@@ -75,41 +97,112 @@
     <!-- ABOUT ME END -->
 
     <!-- SECTION TINGKATAN PANGKAT -->
-     <section id="tingkatan" class="tingkatan-section scroll-reveal">
+    <section id="tingkatan" class="tingkatan-section scroll-reveal">
       <div class="container">
         <h2 class="section-title">TINGKATAN</h2>
         <div class="tingkatan-grid">
           <!-- PRATAR -->
-           <div class="pangkat-card">
+          <div class="pangkat-card">
             <div class="pangkat-img-box">
-              <img src="/image/6.png" alt="">
+              <img src="/image/6.png" alt="" />
             </div>
             <div class="pangkat-text">PRATAR</div>
-           </div>
-           <!-- SERTAR -->
-            <div class="pangkat-card">
+          </div>
+          <!-- SERTAR -->
+          <div class="pangkat-card">
             <div class="pangkat-img-box">
-              <img src="/image/7.png" alt="">
+              <img src="/image/7.png" alt="" />
             </div>
             <div class="pangkat-text">SERTAR</div>
-           </div>
-           <!-- SERMADATAR -->
-            <div class="pangkat-card">
+          </div>
+          <!-- SERMADATAR -->
+          <div class="pangkat-card">
             <div class="pangkat-img-box">
-              <img src="/image/8.png" alt="">
+              <img src="/image/8.png" alt="" />
             </div>
             <div class="pangkat-text">SERMADATAR</div>
-           </div>
-           <!-- SERMATUTAR -->
-            <div class="pangkat-card">
+          </div>
+          <!-- SERMATUTAR -->
+          <div class="pangkat-card">
             <div class="pangkat-img-box">
-              <img src="/image/9.png" alt="">
+              <img src="/image/9.png" alt="" />
             </div>
             <div class="pangkat-text">SERMATUTAR</div>
-           </div>
+          </div>
         </div>
       </div>
-     </section>
+    </section>
+
+    <!-- SECTION DAFTAR GUB AKMIL -->
+
+    <section id="pejabat" class="pejabat-section">
+      <div class="container">
+        <div class="pejabat-header">
+          <h2 class="section-title-center">Daftar Pejabat Akmil</h2>
+          <p class="section-subtitle">
+            Unsur Pimpinan dan Pelaksana Akademi Militer
+          </p>
+        </div>
+
+        <div class="pejabat-grid scroll-reveal">
+          <div class="pejabat-card">
+            <div class="pejabat-img-wrapper">
+              <img
+                src="image/gubernur.jpg"
+                alt="Foto Gubernur Akmil"
+                class="pejabat-img"
+              />
+            </div>
+            <div class="pejabat-info">
+              <h3>GUBERNUR AKMIL</h3>
+              <p class="pejabat-role">Pimpinan Utama Lembaga</p>
+            </div>
+          </div>
+
+          <div class="pejabat-card">
+            <div class="pejabat-img-wrapper">
+              <img
+                src="image/wagub.jpg"
+                alt="Foto Wagub Akmil"
+                class="pejabat-img"
+              />
+            </div>
+            <div class="pejabat-info">
+              <h3>WAGUB AKMIL</h3>
+              <p class="pejabat-role">Wakil Pimpinan Lembaga</p>
+            </div>
+          </div>
+
+          <div class="pejabat-card">
+            <div class="pejabat-img-wrapper">
+              <img
+                src="image/dirdik.jpg"
+                alt="Foto Dirdik Akmil"
+                class="pejabat-img"
+              />
+            </div>
+            <div class="pejabat-info">
+              <h3>DIRDIK AKMIL</h3>
+              <p class="pejabat-role">Direktur Pendidikan</p>
+            </div>
+          </div>
+
+          <div class="pejabat-card">
+            <div class="pejabat-img-wrapper">
+              <img
+                src="image/dirum.jpg"
+                alt="Foto Dirum Akmil"
+                class="pejabat-img"
+              />
+            </div>
+            <div class="pejabat-info">
+              <h3>DIRUM AKMIL</h3>
+              <p class="pejabat-role">Direktur Umum</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- SYARAT -->
     <section id="syarat" class="syarat-section">
@@ -172,8 +265,15 @@
     <section id="pendaftaran" class="pendaftaran_section scroll-reveal">
       <div class="container text-center-cta">
         <h2 class="cta-title">Siap Menjadi Bagian dari Taruna/i Akmil?</h2>
-        <p class="cta-subtitle">Jangan lewatkan kesempatanmu. Segera daftarkan diri sekarang juga melalui tautan dibawah ini.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3wDZU5ZdJP3DclsAzETI1rInlF4mjYum8f8BNbK_Pau2Jpg/viewform?usp=dialog" target="_blank" class="btn-daftar-gform">
+        <p class="cta-subtitle">
+          Jangan lewatkan kesempatanmu. Segera daftarkan diri sekarang juga
+          melalui tautan dibawah ini.
+        </p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSc3wDZU5ZdJP3DclsAzETI1rInlF4mjYum8f8BNbK_Pau2Jpg/viewform?usp=dialog"
+          target="_blank"
+          class="btn-daftar-gform"
+        >
           <i class="fab fa-wpforms"></i> Isi Formulir Pendaftaran G-Form
         </a>
       </div>
@@ -182,7 +282,7 @@
     <!-- FOTO GALERY -->
     <section id="galery" class="galery scroll-reveal">
       <div class="container">
-        <h2 class="section-title">GALERY</h2>
+        <h2 class="section-title">Gallery</h2>
         <p class="section-subtitle">Klik Gambar untuk memperbesar</p>
         <div class="galery-grid">
           <!-- FIX: class diganti gallery-item agar cocok dengan script.js -->
