@@ -112,29 +112,54 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// FORMULIR REGIS
-const openFormBtn = document.getElementById("openFormBtn");
-const formulirModal = document.getElementById("formulirModal");
-const closeFormModal = document.querySelector(".close-form-modal");
+document.addEventListener("DOMContentLoaded", function () {
+  const btnBukaModal = document.querySelector(".btn-daftar-gform");
+  const catarModal = document.getElementById("catarModal");
+  const btnSalin = document.getElementById("btnSalinCatar");
+  const nomorCatarAcak = document.getElementById("nomorCatarAcak");
 
-if (openFormBtn && formulirModal) {
-  openFormBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    formulirModal.style.display = "flex"; 
+  // TARGET UTAMA: Kita ambil class .close-modal ATAU .close bawaan template lu
+  const closeBtn = document.querySelector(".close-modal, .close");
+
+  // 1. Logika Buka Modal & Acak Angka
+  if (btnBukaModal && catarModal) {
+    btnBukaModal.addEventListener("click", function (e) {
+      e.preventDefault();
+      const angkaRandom = Math.floor(1000 + Math.random() * 9000);
+      if (nomorCatarAcak) {
+        nomorCatarAcak.innerText = "CATAR-" + angkaRandom;
+      }
+      catarModal.style.display = "flex";
+    });
+  }
+
+  // 2. Logika Tutup Modal (Pencet Tombol Silang)
+  if (closeBtn && catarModal) {
+    closeBtn.addEventListener("click", function (e) {
+      e.preventDefault(); // Biar gak nge-trigger link/refresh
+      catarModal.style.display = "none";
+    });
+  }
+
+  // BUAT CLOSE
+  window.addEventListener("click", function (e) {
+    if (e.target === catarModal) {
+      catarModal.style.display = "none";
+    }
   });
-}
 
-if (closeFormModal && formulirModal) {
-  closeFormModal.addEventListener("click", function () {
-    formulirModal.style.display = "none";
-  });
-}
-
-window.addEventListener("click", function (e) {
-  if (e.target === formulirModal) {
-    formulirModal.style.display = "none";
+  // BUAT SALIN NOMOR NYA
+  if (btnSalin && nomorCatarAcak) {
+    btnSalin.addEventListener("click", function () {
+      const teksNomor = nomorCatarAcak.innerText;
+      navigator.clipboard.writeText(teksNomor).then(() => {
+        btnSalin.innerText = "BERHASIL DISALIN! ✓";
+        btnSalin.style.backgroundColor = "#2ecc71";
+        setTimeout(() => {
+          btnSalin.innerText = "SALIN NOMOR CATAR";
+          btnSalin.style.backgroundColor = "var(--primary-blue)";
+        }, 2000);
+      });
+    });
   }
 });
-
-const robloxForm = document.getElementById("robloxForm");
-const hiddenNoCatar = document.getElementById("hiddenNoCatar");

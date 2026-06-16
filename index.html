@@ -343,75 +343,34 @@
 
       <div class="footer-bottom">
         <p>
-          &copy; 2026 Akademi MIliter Roblox. All Rights Reserved. Created by Senjuu_.
+          &copy; 2026 Akademi MIliter Roblox. All Rights Reserved. Created by
+          Senjuu_.
         </p>
       </div>
     </footer>
 
-    <!-- INI BUAT FORMULIR PENDAFTARAN -->
-    <div id="formulirModal" class="form-overlay">
-      <div class="form-modal-box">
-        <span class="close-form-modal">&times;</span>
+    <div id="catarModal" class="modal-roblox">
+      <div class="modal-roblox-content">
+        <span class="close-modal">&times;</span>
 
-        <div class="form-modal-header">
-          <h3>REGISTRASI DIVISI ROBLOX</h3>
-          <p>Pastikan data akun dan role Anda sudah sesuai</p>
+        <h2 class="modal-title">KARTU PESERTA SELEKSI</h2>
+        <p class="modal-subtitle">
+          Selamat! Anda telah terdaftar dalam sistem Akademi Militer
+        </p>
+
+        <div class="catar-card-box">
+          <span class="catar-label">NOMOR REGISTRASI</span>
+          <div id="nomorCatarAcak" class="catar-number">CATAR-0000</div>
         </div>
 
-        <form action="" method="POST" class="form-modal-content">
-          <input type="hidden" id="hiddenNoCatar" name="nomor_catar" />
-
-          <div class="form-group-custom">
-            <label>Nama / Username Roblox</label>
-            <input
-              type="text"
-              name="nama_roblox"
-              placeholder="Contoh: Builderman_RPL"
-              required
-              autocomplete="off"
-            />
-          </div>
-
-          <div class="form-group-custom">
-            <label>ID Akun Roblox</label>
-            <input
-              type="text"
-              name="id_roblox"
-              placeholder="Contoh: 41829402"
-              required
-              autocomplete="off"
-            />
-          </div>
-
-          <div class="form-group-custom">
-            <label>Jenis Kelamin</label>
-            <select name="jenis_kelamin" required>
-              <option value="" disabled selected>Pilih Jenis Kelamin</option>
-              <option value="Laki-laki">Laki-laki</option>
-              <option value="Perempuan">Perempuan</option>
-            </select>
-          </div>
-
-          <div class="form-group-custom">
-            <label>Role / Peran Utama</label>
-            <select name="role_roblox" required>
-              <option value="" disabled selected>Pilih Role Anda</option>
-              <option value="Attacker / Rusher">CALON SISWA</option>
-              <option value="Defender / Tank">PRADA-PRAKA</option>
-            </select>
-          </div>
-
-          <button
-            type="submit"
-            name="submit_roblox"
-            class="btn-submit-form-custom"
-          >
-            SUBMIT DATA AKUN
-          </button>
-        </form>
+        <p class="modal-footer-text">
+          Simpan nomor ini baik-baik untuk melihat hasil seleksi.
+        </p>
+        <button type="button" id="btnSalinCatar" class="btn-roblox-submit">
+          SALIN NOMOR CATAR
+        </button>
       </div>
     </div>
-    <!-- END FORMULIR PENDAFTARAN -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const suksesModal = document.getElementById("suksesModal");
