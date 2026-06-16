@@ -111,3 +111,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// FORMULIR REGIS
+const openFormBtn = document.getElementById("openFormBtn");
+const formulirModal = document.getElementById("formulirModal");
+const closeFormModal = document.querySelector(".close-form-modal");
+
+if (openFormBtn && formulirModal) {
+  openFormBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    formulirModal.style.display = "flex"; 
+  });
+}
+
+if (closeFormModal && formulirModal) {
+  closeFormModal.addEventListener("click", function () {
+    formulirModal.style.display = "none";
+  });
+}
+
+window.addEventListener("click", function (e) {
+  if (e.target === formulirModal) {
+    formulirModal.style.display = "none";
+  }
+});
+
+const robloxForm = document.getElementById("robloxForm");
+const hiddenNoCatar = document.getElementById("hiddenNoCatar");

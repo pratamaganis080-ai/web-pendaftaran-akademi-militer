@@ -24,9 +24,21 @@
                 <a href="#" class="nested-trigger">Korps Pendidikan ▸</a>
 
                 <ul class="nested-menu">
-                  <li><a href="/infanteri/infanteri.html">Infanteri</a></li>
-                  <li><a href="/kavaleri/kavaleri.html">Kavaleri</a></li>
-                  <li><a href="#">Polisi Militer</a></li>
+                  <li>
+                    <a href="/infanteri/infanteri.html" target="_blank"
+                      >Infanteri</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/kavaleri/kavaleri.html" target="_blank"
+                      >Kavaleri</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/polisi militer/pomad.html" target="_blank"
+                      >Polisi Militer</a
+                    >
+                  </li>
                   <li><a href="#">Penerbad</a></li>
                 </ul>
               </li>
@@ -81,7 +93,7 @@
     </section>
     <!-- ABOUT ME END -->
 
-    <section id="korps-pendidikan" class="korps-section">
+    <section id="korps-pendidikan" class="korps-section scroll-reveal">
       <div class="container-korps">
         <h2 class="section-title-korps">Korps Pendidikan</h2>
         <p class="section-subtitle-korps">
@@ -89,9 +101,15 @@
         </p>
 
         <div class="korps-buttons-wrapper">
-          <a href="/infanteri/infanteri.html" class="korps-btn">Infanteri</a>
-          <a href="/kavaleri/kavaleri.html" class="korps-btn">Kavaleri</a>
-          <a href="#" class="korps-btn">Polisi Militer</a>
+          <a href="/infanteri/infanteri.html" target="_blank" class="korps-btn"
+            >Infanteri</a
+          >
+          <a href="/kavaleri/kavaleri.html" target="_blank" class="korps-btn"
+            >Kavaleri</a
+          >
+          <a href="/polisi militer/pomad.html" target="_blank" class="korps-btn"
+            >Polisi Militer</a
+          >
           <a href="#" class="korps-btn">Penerbad</a>
         </div>
       </div>
@@ -199,13 +217,19 @@
           Jangan lewatkan kesempatanmu. Segera daftarkan diri sekarang juga
           melalui tautan dibawah ini.
         </p>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSc3wDZU5ZdJP3DclsAzETI1rInlF4mjYum8f8BNbK_Pau2Jpg/viewform?usp=dialog"
-          target="_blank"
-          class="btn-daftar-gform"
-        >
-          <i class="fab fa-wpforms"></i> Isi Formulir Pendaftaran G-Form
-        </a>
+        <div>
+          <a
+            href="#formulirModal"
+            id="openFormBtn"
+            target="_blank"
+            class="btn-daftar-gform"
+          >
+            <i class="fab fa-wpforms"></i> Isi Formulir Pendaftaran G-Form
+          </a>
+          <a href="/hasil_nilai.html" class="btn-cek-hasil" target="_blank">
+            <i class="fas fa-user-shield"></i> Lihat Hasil Test Seleksi
+          </a>
+        </div>
       </div>
     </section>
 
@@ -215,7 +239,6 @@
         <h2 class="section-title">Gallery</h2>
         <p class="section-subtitle">Klik Gambar untuk memperbesar</p>
         <div class="galery-grid">
-          <!-- FIX: class diganti gallery-item agar cocok dengan script.js -->
           <div class="galery-item gallery-item">
             <img src="../image/img1.png" alt="Foto 1" />
           </div>
@@ -241,23 +264,165 @@
     </div>
     <!-- FITUR POP-UP END -->
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact scroll-reveal">
-      <div class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <form class="contact-form">
-          <input type="text" placeholder="Nama Anda" required />
-          <input type="email" placeholder="Email Anda" required />
-          <textarea rows="5" placeholder="Pesan Anda" required></textarea>
-          <button type="submit" class="btn-submit">Kirim Pesan</button>
-        </form>
-        <div class="social-links">
-          <a href="https://www.tiktok.com/@username_kamu" target="_blank"
-            ><i class="fab fa-tiktok"></i
-          ></a>
+    <!-- ADHIMAKAYASA SECTION -->
+    <section id="adhi-makayasa" class="data0-table-container scroll-reveal">
+      <div class="container text-center-cta">
+        <h2 class="cta-title">Daftar Peraih Penghargaan Adhi Makayasa</h2>
+        <p class="cta-subtitle">
+          Taruna lulusan terbaik yang mendapatkan penghargaan tertinggi atas
+          prestasi, mentalitas, dan fisik prima sepanjang pendidikan.
+        </p>
+
+        <div
+          class="data-table-container"
+          style="margin-top: 30px; text-align: left"
+        >
+          <table class="wiki-table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Lulusan Terbaik</th>
+                <th>No. Akademi</th>
+                <th>Tahun Kelulusan</th>
+                <th>Korps / Matra</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>aditia</td>
+                <td>2025.01</td>
+                <td>2025</td>
+                <td>
+                  <span class="badge badge-kodiklatad">KODIKLATAD</span>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Luca</td>
+                <td>2026.04</td>
+                <td>2023</td>
+                <td>
+                  <span class="badge badge-kodiklatad">Infantri (Kostrad)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>prabowosubianto051</td>
+                <td>2026.3</td>
+                <td>2023</td>
+                <td>
+                  <span class="badge badge-kostrad">Infantri (Yonif 305)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>AKADEMI MILITER</h3>
+          <p>
+            Membentuk Perwira TNI AD yang tangguh, profesional, dan berkarakter.
+          </p>
+        </div>
+
+        <div class="footer-socials">
+          <a
+            href="https://www.tiktok.com/@username_kamu"
+            target="_blank"
+            aria-label="TikTok"
+          >
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Akademi MIliter Roblox. All Rights Reserved. Created by Senjuu_.
+        </p>
+      </div>
+    </footer>
+
+    <!-- INI BUAT FORMULIR PENDAFTARAN -->
+    <div id="formulirModal" class="form-overlay">
+      <div class="form-modal-box">
+        <span class="close-form-modal">&times;</span>
+
+        <div class="form-modal-header">
+          <h3>REGISTRASI DIVISI ROBLOX</h3>
+          <p>Pastikan data akun dan role Anda sudah sesuai</p>
+        </div>
+
+        <form action="" method="POST" class="form-modal-content">
+          <input type="hidden" id="hiddenNoCatar" name="nomor_catar" />
+
+          <div class="form-group-custom">
+            <label>Nama / Username Roblox</label>
+            <input
+              type="text"
+              name="nama_roblox"
+              placeholder="Contoh: Builderman_RPL"
+              required
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group-custom">
+            <label>ID Akun Roblox</label>
+            <input
+              type="text"
+              name="id_roblox"
+              placeholder="Contoh: 41829402"
+              required
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group-custom">
+            <label>Jenis Kelamin</label>
+            <select name="jenis_kelamin" required>
+              <option value="" disabled selected>Pilih Jenis Kelamin</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+          </div>
+
+          <div class="form-group-custom">
+            <label>Role / Peran Utama</label>
+            <select name="role_roblox" required>
+              <option value="" disabled selected>Pilih Role Anda</option>
+              <option value="Attacker / Rusher">CALON SISWA</option>
+              <option value="Defender / Tank">PRADA-PRAKA</option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            name="submit_roblox"
+            class="btn-submit-form-custom"
+          >
+            SUBMIT DATA AKUN
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- END FORMULIR PENDAFTARAN -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const suksesModal = document.getElementById("suksesModal");
+        const tampilNoCatar = document.getElementById("tampilNoCatar");
+
+        if (suksesModal && tampilNoCatar) {
+          tampilNoCatar.innerText = "<?php echo $no_catar_saved; ?>";
+          suksesModal.style.display = "flex";
+        }
+      });
+    </script>
 
     <script src="script.js"></script>
   </body>

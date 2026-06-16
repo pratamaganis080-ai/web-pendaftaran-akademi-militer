@@ -243,6 +243,75 @@
         border: 1px solid rgba(40, 167, 69, 0.25);
       }
 
+      /* PEJABAT INFOBOX */
+
+      .infobox-pejabat-row {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        vertical-align: top;
+      }
+
+      .infobox-label-pejabat {
+        padding: 12px 10px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #ffffff;
+        width: 35%;
+      }
+
+      .infobox-data-pejabat {
+        padding: 12px 10px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .pejabat-list {
+        margin: 0;
+        padding-left: 16px;
+        list-style-type: disc;
+        color: #dddddd;
+      }
+
+      .pejabat-list li {
+        margin-bottom: 12px;
+      }
+
+      .pejabat-list li:last-child {
+        margin-bottom: 0;
+      }
+
+      .pejabat-wrapper {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .icon-pangkat-single {
+        height: 14px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+      }
+
+      .pangkat-pejabat {
+        color: #a8b2ff;
+      }
+
+      .nama-pejabat {
+        color: #a8b2ff;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .nama-pejabat:hover {
+        text-decoration: underline;
+      }
+
+      .jabatan-pejabat {
+        color: #ffffff;
+      }
+
       /* RESPONSIV HP */
       @media (max-width: 850px) {
         .wiki-top-layout {
@@ -307,7 +376,7 @@
         <div class="infobox">
           <div class="infobox-title">Korps Infanteri</div>
           <div class="infobox-img-container">
-            <img src="" alt="Lambang Kavaleri" class="infobox-img" />
+            <img src="/infanteri/Logo_Infanteri_TNI_AD.png" alt="Lambang Infanteri" class="infobox-img" />
           </div>
           <table class="infobox-table">
             <tr>
@@ -325,6 +394,29 @@
             <tr>
               <th>Senjata Utama</th>
               <td>Senapan Serbu, Mortir, SMG</td>
+            </tr>
+            <tr class="infobox-pejabat-row">
+              <td class="infobox-label-pejabat">Pejabat eksekutif</td>
+              <td class="infobox-data-pejabat">
+                <ul class="pejabat-list">
+                  <li>
+                    <div class="pejabat-wrapper">
+                      <img src="/image/Flag_of_a_Indonesian_Army_Letnan_Jenderal kos.png" alt="Letjend" class="icon-pangkat-single">
+                      <span class="pangkat-pejabat">Letnan Jenderal</span>
+                      <span class="nama-pejabat">Kz-edogawa</span>
+                      <span class="jabatan-pejabat">Pangkostrad</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="pejabat-wrapper">
+                      <img src="/image/Flag_of_a_Indonesian_Army_letnan_jenderal.png" alt="Letjend" class="icon-pangkat-single">
+                      <span class="pangkat-pejabat">Letnan Jenderal</span>
+                      <span class="nama-pejabat">johndanver</span>
+                      <span class="jabatan-pejabat">Pangkopassus</span>
+                    </div>
+                  </li>
+                </ul>
+              </td>
             </tr>
           </table>
         </div>

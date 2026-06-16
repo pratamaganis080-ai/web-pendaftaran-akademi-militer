@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Seleksi Pantukhir</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-color: #0b0c0b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .dashboard-box {
+        max-width: 600px;
+        width: 90%;
+        padding: 40px;
+        background: #111111;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
+        display: none;
+      } /* Sembunyi secara default */
+      .nilai-badge {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: #ffff00;
+        margin: 25px 0;
+        padding: 15px 40px;
+        background: rgba(0, 92, 41, 0.15);
+        border: 1px solid #005c29;
+        border-radius: 6px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="kontenNilai" class="dashboard-box">
+      <h2 style="color: #ffffff; margin: 0; letter-spacing: 1px">
+        HASIL SELEKSI PANTUKHIR
+      </h2>
+      <p style="color: #8e9590; font-size: 0.9rem; margin-top: 5px">
+        Akademi Militer Magelang
+      </p>
+      <hr
+        style="
+          border: 0;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          margin: 25px 0;
+        "
+      />
+
+      <p style="color: #ffffff; font-size: 1.2rem; margin: 0">
+        Selamat Datang,
+        <strong style="color: #a8b2ff" id="namaTaruna">Calon Taruna</strong>
+      </p>
+      <p style="color: #8e9590; font-size: 0.9rem; margin-top: 5px">
+        No. Catar: <span id="nomorCatar" style="color: #ffffff"></span> |
+        Status: <span style="color: #00ff55">Terverifikasi</span>
+      </p>
+
+      <div style="margin-top: 35px">
+        <p
+          style="
+            color: #dddddd;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+          "
+        >
+          NILAI AKHIR EVALUASI :
+        </p>
+        <div class="nilai-badge" id="angkaNilai">88.50</div>
+      </div>
+
+      <p style="margin-top: 40px">
+        <a
+          href="index.html"
+          style="
+            background: #ff4d5e;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+          "
+          >KELUAR PORTAL</a
+        >
+      </p>
+    </div>
+
+    <script>
+      // Data Dummy Database Lokal (Biar anak RPL bisa simulasi tanpa PHP-XAMPP error)
+      const databaseCatar = {
+        "CATAR-2026-0001": { nama: "Eka Wijaya Permana", nilai: "87.45" },
+        "CATAR-2026-0002": { nama: "Rory Achmad Sembiring", nilai: "89.10" },
+        "CATAR-2026-0003": { nama: "Rahmat Sapari", nilai: "85.20" },
+      };
+
+      // Menggunakan prompt bawaan browser yang taktis dan aman
+      let inputNoCatar = prompt(
+        "PORTAL PANTUKHIR:\nMasukkan Nomor CATAR Anda untuk melihat hasil nilai:",
+      );
+
+      // Validasi Cek Database
+      if (inputNoCatar in databaseCatar) {
+        // JIKA NOMOR COCOK: Isi data pendaftar otomatis & munculkan halaman nilai
+        document.getElementById("namaTaruna").innerText =
+          databaseCatar[inputNoCatar].nama;
+        document.getElementById("nomorCatar").innerText = inputNoCatar;
+        document.getElementById("angkaNilai").innerText =
+          databaseCatar[inputNoCatar].nilai;
+
+        // Tampilkan kotak nilai
+        document.getElementById("kontenNilai").style.display = "block";
+      } else {
+        // JIKA SALAH ATAU ASAL-ASALAN: Tendang balik ke beranda utama langsung
+        alert("Akses Ditolak! Nomor CATAR Tidak Terdaftar atau Salah.");
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

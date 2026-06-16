@@ -775,8 +775,320 @@ body {
   transition-delay: 0.5s;
 }
 
-/* RESPONSIVE*/
+/* BOTTOM HASIL SELEKSI */
+.btn-cek-hasil {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background-color: #222222;
+  color: #ffffff;
+  border: 2px solid #005c29;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
 
+.btn-cek-hasil:hover {
+  background-color: #005c29;
+  color: #ffff00;
+  box-shadow: 0 5px 20px rgba(0, 92, 41, 0.4);
+  transform: translateY(-2px);
+}
+
+/* STYLE FORMULIR PENDAFTARAN */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  z-index: 999999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.form-modal-box {
+  background-color: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 5px solid #ffff00;
+  width: 100%;
+  max-width: 650px;
+  padding: 35px 30px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  animation: formSlideUp 0.35s ease-out;
+}
+
+@keyframes formSlideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* DESIGN KALO DI CLOSE */
+.close-form-modal {
+  position: absolute;
+  top: 15px;
+  right: 22px;
+  font-size: 2rem;
+  color: #8e9590;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-form-modal:hover {
+  color: #ff4d5e;
+}
+
+.form-modal-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-modal-header h3 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin: 0 0 5px 0;
+}
+
+.form-modal-header p {
+  color: #8e9590;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.form-row-two {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group-custom {
+  flex: 1;
+  margin-bottom: 20px;
+  min-width: 200px;
+}
+
+.form-group-custom label {
+  display: block;
+  color: #dddddd;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group-custom input,
+.form-group-custom select {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #1a1d1b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.form-group-custom input:focus,
+.form-group-custom select:focus {
+  outline: none;
+  border-color: #ffff00;
+  box-shadow: 0 0 8px rgba(255, 255, 0, 0.2);
+}
+
+.btn-submit-form-custom {
+  width: 100%;
+  padding: 14px;
+  background-color: #005c29;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.25s ease;
+}
+
+.btn-submit-form-custom:hover {
+  background-color: #007d37;
+  color: #ffff00;
+  box-shadow: 0 5px 20px rgba(0, 92, 41, 0.4);
+}
+
+@media screen and (max-width: 600px) {
+  .form-row-two {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* TABEL NAMA TARUNA  */
+.full-width-section {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.data-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 15px;
+  border-radius: 6px;
+  border: 1px solid var(--accent-yellow);
+}
+
+.wiki-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-card);
+  font-size: 0.95rem;
+}
+
+.wiki-table th,
+.wiki-table td {
+  padding: 14px 18px;
+  text-align: left;
+}
+
+.wiki-table th {
+  background-color: rgba(255, 255, 255, 0.02);
+  color: var();
+  font-weight: 700;
+  border-bottom: 2px solid var(--border-color);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.wiki-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.wiki-table tr:last-child {
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.badge-kopassus {
+  background-color: rgba(220, 53, 69, 0.12);
+  color: #ff4d5e;
+  border: 1px solid rgba(220, 53, 69, 0.25);
+}
+.badge-kostrad {
+  background-color: rgba(40, 167, 69, 0.12);
+  color: #2ecc71;
+  border: 1px solid rgba(40, 167, 69, 0.25);
+}
+
+/* START FOOTER */
+.main-footer {
+  background-color: var(--dark-bg);
+  border-top: 3px solid var(--accent-yellow); 
+  color: var(--light-text);
+  padding: 40px 0 20px 0;
+  margin-top: 50px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+  gap: 25px; 
+}
+
+.footer-brand h3 {
+  color: var(--accent-yellow); 
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-size: 0.9rem;
+  max-width: 550px; 
+  line-height: 1.6;
+}
+
+/* TIKTOK */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  color: var(--light-text);
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background-color: var(--primary-blue); 
+  color: var(--light-text);
+  border-color: var(--primary-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 115, 229, 0.5);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.5px;
+}
+
+/* RESPONSIVE*/
 /* TABLET VIEW */
 @media (max-width: 992px) {
   .project-grid {
