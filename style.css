@@ -550,59 +550,6 @@ body {
   cursor: pointer;
 }
 
-/* CONTACT */
-.contact {
-  background-color: #1a1a1a;
-}
-
-.contact-form {
-  max-width: 60px;
-  max-width: 600px;
-  margin: 0 auto 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #333;
-  background-color: #222;
-  color: #fff;
-}
-
-.btn-submit {
-  background-color: var(--primary-blue);
-  color: white;
-  padding: 15px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-submit:hover {
-  background-color: #0056b3;
-}
-
-.social-links {
-  text-align: center;
-}
-
-.social-links a {
-  color: var(--light-text);
-  font-size: 1.8rem;
-  margin: 0 15px;
-  transition: color 0.3s;
-}
-
-.social-links a:hover {
-  color: var(--accent-yellow);
-}
-
 /* TINGKATAN SECTION START*/
 .tingkatan-section {
   background-color: var(--dark-bg);
@@ -678,7 +625,7 @@ body {
 }
 /* TINGAKATAN END */
 
-/* PENDAFTARAN START */
+/* PENDAFTARAN START  */
 .pendaftaran-section {
   background: linear-gradient(
     135deg,
@@ -711,7 +658,7 @@ body {
   line-height: 1.6;
 }
 
-/* TOMBOL */
+/* TOMBOL  */
 .btn-daftar-gform {
   display: inline-flex;
   align-items: center;
@@ -775,7 +722,7 @@ body {
   transition-delay: 0.5s;
 }
 
-/* BOTTOM HASIL SELEKSI */
+/* BOTTOM HASIL SELEKSI  */
 .btn-cek-hasil {
   display: inline-flex;
   align-items: center;
@@ -800,25 +747,23 @@ body {
   transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   STYLING MODAL GENERATOR NOMOR CATAR
-   ========================================================================== */
+/* CSS GENET NOMOR CATAR */
 .modal-roblox {
-  display: none; /* Sembunyikan default, muncul lewat JS */
+  display: none;
   position: fixed;
   z-index: 9999;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75); /* Efek backdrop gelap melayang */
+  background-color: rgba(0, 0, 0, 0.75);
   justify-content: center;
   align-items: center;
 }
 
 .modal-roblox-content {
-  background-color: var(--dark-bg); /* Mengikuti warna hitam bawaan #111111 */
-  border-top: 4px solid var(--accent-yellow); /* Garis kuning atas khas lu */
+  background-color: var(--dark-bg);
+  border-top: 4px solid var(--accent-yellow);
   padding: 35px 30px;
   width: 90%;
   max-width: 480px;
@@ -871,7 +816,7 @@ body {
 
 .catar-label {
   display: block;
-  color: var(--accent-yellow); /* Label teks kuning kecil */
+  color: var(--accent-yellow);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -880,7 +825,7 @@ body {
 
 .catar-number {
   color: var(--light-text);
-  font-size: 2.2rem; /* Ukuran nomor dibikin besar biar gagah */
+  font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: 3px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -892,7 +837,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Tombol Salin Data (Menggunakan warna biru primer lu untuk variasi baru) */
 .btn-roblox-submit {
   width: 100%;
   background-color: var(--primary-blue);
@@ -977,6 +921,12 @@ body {
   border: 1px solid rgba(40, 167, 69, 0.25);
 }
 
+.badge-kodiklatad {
+  background-color: rgba(255, 221, 0, 0.12);
+  color: #ffdd00;
+  border: 1px solid rgba(255, 221, 0, 0.25);
+}
+
 /* START FOOTER */
 .main-footer {
   background-color: var(--dark-bg);
@@ -1057,6 +1007,153 @@ body {
   color: rgba(255, 255, 255, 0.4);
   letter-spacing: 0.5px;
 }
+
+/* SECTION TATA CARA */
+.tata-cara-section {
+  background-color: var(--dark-bg);
+  padding: 60px 0;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--light-text);
+}
+
+.container-tata-cara {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.tata-cara-title {
+  color: var(--light-text);
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.tata-cara-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-yellow);
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+.tata-cara-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+}
+
+.tata-cara-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.tata-cara-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: left;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.tata-cara-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(0, 115, 229, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(0, 115, 229, 0.15);
+  font-family: "Impact", sans-serif;
+  line-height: 1;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.tata-cara-card:hover .card-number {
+  color: var(--primary-blue);
+}
+
+.tata-cara-card h3 {
+  color: var(--light-text);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.tata-cara-card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tata-cara-card p strong {
+  color: var(--accent-yellow);
+}
+
+/* RESPONSIVE BREAKPOINT */
+@media (max-width: 600px) {
+  .tata-cara-card {
+    text-align: center;
+  }
+  .tata-cara-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* TOMBOL ISI GFORM */
+.text-center-cta div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* Memberi jarak konsisten antar tombol */
+  margin-top: 25px;
+}
+
+.btn-link-gform {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--secondary-green);
+  color: white;
+  padding: 15px 40px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(255, 255, 30, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-link-gform:hover {
+  background-color: #084d1a;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(11, 102, 35, 0.5);
+}
+
+.btn-link-gform i {
+  font-size: 0.75rem;
+}
+
+/* .btn-daftar-gform,
+.btn-cek-hasil,
+.btn-link-gform {
+  min-width: 220px; 
+  box-sizing: border-box;
+} */
 
 /* RESPONSIVE*/
 /* TABLET VIEW */

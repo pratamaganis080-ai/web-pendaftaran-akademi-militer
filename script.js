@@ -163,3 +163,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Tambahan di file script.js lu jika pake animasi scroll reveal bawaan template
+if (typeof ScrollReveal !== "undefined") {
+  ScrollReveal().reveal(".tata-cara-section", {
+    delay: 200,
+    distance: "50px",
+    origin: "bottom",
+    duration: 1000,
+  });
+}
