@@ -1110,7 +1110,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px; 
+  gap: 15px;
   margin-top: 25px;
 }
 
@@ -1184,7 +1184,7 @@ body {
 }
 
 .profil-sub-title::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 4px;
@@ -1216,7 +1216,6 @@ body {
   font-size: 0.8rem;
   margin-top: 6px;
 }
-
 
 .profil-main-title {
   font-size: 2.2rem;
@@ -1343,7 +1342,7 @@ body {
 
   .profil-deskripsi {
     width: 100% !important;
-    text-align: center !important; 
+    text-align: center !important;
   }
 
   .profil-main-title::after {
@@ -1364,7 +1363,7 @@ body {
 
   .akmil-list-satuan li {
     justify-content: center !important;
-    text-align:  left !important;
+    text-align: left !important;
   }
 }
 /* ABOUT HAL UTAMA END */
@@ -1393,7 +1392,7 @@ body {
 }
 
 .alur-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 3px;
@@ -1479,6 +1478,72 @@ body {
     font-size: 0.85rem;
   }
 }
+/* END ALUR SELESKI */
+
+/* PENGUMUMAN COUNTDOWN */
+.tgl-buka {
+  color: var(--accent-yellow);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0 35px 0;
+}
+
+.countdown-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.01);
+  border-radius: 8px;
+  padding: 10px 15px;
+  min-width: 70px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-box span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent-yellow);
+}
+
+.countdown-box p {
+  margin: 3px 0 0 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.disable-btn {
+  background-color: #333333 !important;
+  color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: not-allowed !important;
+  pointer-events: none;
+  box-shadow: none !important;
+}
+
+/* RESPONSIVE KUNCI COUNTDOWN */
+@media (max-width: 480px) {
+  .countdown-container {
+    gap: 8px;
+  }
+  .countdown-box {
+    min-width: 55px;
+    padding: 8px 10px;
+  }
+  .countdown-box span {
+    font-size: 1.4rem;
+  }
+}
+/* END COUNDOWN */
+
+
+
 
 
 /* RESPONSIVE*/

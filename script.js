@@ -173,3 +173,54 @@ if (typeof ScrollReveal !== "undefined") {
     duration: 1000,
   });
 }
+
+// Atur tanggal target pendaftaran dibuka (12 Juli 2026 00:00:00)
+const tanggalBuka = new Date("July 12, 2026 00:00:00").getTime();
+
+const hitungMundur = setInterval(function () {
+  const sekarang = new Date().getTime();
+  // Di bawah ini udah digabung jadi selisihWaktu (Tanpa Spasi)
+  const selisihWaktu = tanggalBuka - sekarang;
+
+  // Hitung konversi waktu ke Hari, Jam, Menit, Detik
+  const hari = Math.floor(selisihWaktu / (1000 * 60 * 60 * 24));
+  const jam = Math.floor(
+    (selisihWaktu % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+  );
+  const menit = Math.floor((selisihWaktu % (1000 * 60 * 60)) / (1000 * 60));
+  const detik = Math.floor((selisihWaktu % (1000 * 60)) / 1000);
+
+  // Tampilkan angka ke elemen HTML (Kasih proteksi if biar gak error kalau id belum ke-load)
+  if (document.getElementById("hari")) {
+    document.getElementById("hari").innerHTML = hari < 10 ? "0" + hari : hari;
+    document.getElementById("jam").innerHTML = jam < 10 ? "0" + jam : jam;
+    document.getElementById("menit").innerHTML =
+      menit < 10 ? "0" + menit : menit;
+    document.getElementById("detik").innerHTML =
+      detik < 10 ? "0" + detik : detik;
+  }
+
+  // Ambil elemen tombol Google Form
+  const tombolGform = document.getElementById("btn-gform");
+  const teksTombol = document.getElementById("text-btn-gform");
+
+  if (tombolGform && teksTombol) {
+    if (selisihWaktu > 0) {
+      // JIKA BELUM WAKTUNYA: Kunci tombol
+      tombolGform.classList.add("disabled-btn");
+      teksTombol.innerHTML = "Isi Formulir (Terkunci)";
+    } else {
+      // JIKA WAKTU SUDAH HABIS: Buka gembok tombol!
+      clearInterval(hitungMundur);
+
+      document.getElementById("hari").innerHTML = "00";
+      document.getElementById("jam").innerHTML = "00";
+      document.getElementById("menit").innerHTML = "00";
+      document.getElementById("detik").innerHTML = "00";
+
+      // Aktifkan tombol
+      tombolGform.classList.remove("disabled-btn");
+      teksTombol.innerHTML = "Isi Formulir G-Form";
+    }
+  }
+}, 1000);
