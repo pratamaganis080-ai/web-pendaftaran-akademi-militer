@@ -328,16 +328,6 @@ body {
 }
 /* HERO END */
 
-.about {
-  background-color: #1a1a1a;
-  padding: 60px 0;
-}
-
-.about-grid {
-  display: block;
-  margin-top: 30px;
-}
-
 .korps-section {
   background-color: #1a1d1b;
   padding: 60px 0 80px 0;
@@ -773,8 +763,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   font-family: "Segoe UI", sans-serif;
 }
-
-/* Tombol Close Silang */
+/* TOMBOL CLOSE */
 .close-modal {
   position: absolute;
   right: 20px;
@@ -968,20 +957,21 @@ body {
 /* TIKTOK */
 .footer-socials {
   display: flex;
+  gap: 15px;
   justify-content: center;
 }
 
 .footer-socials a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   color: var(--light-text);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -1120,7 +1110,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px; /* Memberi jarak konsisten antar tombol */
+  gap: 15px; 
   margin-top: 25px;
 }
 
@@ -1154,6 +1144,342 @@ body {
   min-width: 220px; 
   box-sizing: border-box;
 } */
+
+/* SECTION ABOUT/INFORMASI DI HAL UTAMA */
+.profil-akmil-section {
+  background-color: var(--dark-bg); /* #111111 */
+  padding: 70px 0;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--light-text); /* #ffffff */
+}
+
+.container-profil {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.profil-deskripsi {
+  flex: 1;
+  text-align: left;
+}
+
+.profil-sub-section {
+  margin-top: 35px;
+  text-align: left;
+}
+
+.profil-sub-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--light-text);
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.profil-sub-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 4px;
+  height: 1.2rem;
+  background-color: var(--accent-yellow);
+  border-radius: 2px;
+}
+
+.akmil-list-satuan {
+  list-style: none;
+  padding-left: 5px;
+  margin: 15px 0;
+}
+
+.akmil-list-satuan li {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+}
+
+.akmil-list-satuan li i {
+  color: var(--accent-yellow);
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+
+.profil-main-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--light-text);
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.profil-main-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-yellow);
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.profil-deskripsi p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 18px;
+}
+
+.profil-deskripsi p strong {
+  color: var(--accent-yellow);
+}
+
+.infobox-militer {
+  flex: 0 0 350px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
+  padding: 18px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.infobox-title-box {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+  margin-bottom: 15px;
+}
+
+.infobox-title-box h3 {
+  color: var(--accent-yellow);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.infobox-image-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.infobox-image-box img {
+  max-width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+}
+
+.infobox-militer-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.infobox-militer-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.infobox-militer-table tr:last-child {
+  border-bottom: none;
+}
+
+.infobox-militer-table th {
+  padding: 10px 8px 10px 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+  text-align: left;
+  vertical-align: top;
+  width: 40%;
+}
+
+.infobox-militer-table td {
+  padding: 10px 0 10px 8px;
+  color: var(--light-text);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.infobox-militer-table td.text-yellow {
+  color: var(--accent-yellow);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   SULAP LAYOUT KHUSUS HP (INFOBOX DI ATAS, DESKRIPSI DI BAWAH)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .container-profil {
+    flex-direction: column-reverse !important;
+    gap: 30px !important;
+    align-items: center !important;
+  }
+
+  .infobox-militer {
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+  }
+
+  .profil-deskripsi {
+    width: 100% !important;
+    text-align: center !important; 
+  }
+
+  .profil-main-title::after {
+    margin: 10px auto 0 auto !important;
+  }
+
+  .profil-sub-section {
+    text-align: center !important;
+  }
+
+  .profil-sub-title {
+    padding-left: 0 !important;
+  }
+
+  .profil-sub-title::before {
+    display: none !important;
+  }
+
+  .akmil-list-satuan li {
+    justify-content: center !important;
+    text-align:  left !important;
+  }
+}
+/* ABOUT HAL UTAMA END */
+
+/* ALUR TES SELEKSI START */
+.alur-seleksi-section {
+  background-color: var(--dark-bg);
+  padding: 80px 0;
+  color: var(--light-text);
+}
+
+.container-alur {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.alur-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--light-text);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.alur-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-yellow);
+  margin: 15px auto 0 auto;
+  border-radius: 2px;
+}
+
+.alur-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 50px;
+}
+
+.timeline-alur {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.step-card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 20px 25px;
+  transition: all 0.3s ease;
+  gap: 25px;
+}
+
+.step-card:hover {
+  border-color: var(--accent-yellow);
+  background-color: rgba(255, 255, 255, 0.04);
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.step-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--accent-yellow);
+  background-color: rgba(255, 255, 30, 0.07);
+  border: 1px solid rgba(255, 255, 30, 0.2);
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--light-text);
+  margin: 0 0 6px 0;
+}
+
+.step-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* REPONSIVE HP ALUR SELEKSI */
+@media (max-width: 768px) {
+  .step-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 25px 20px;
+  }
+
+  .step-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .step-content p {
+    font-size: 0.85rem;
+  }
+}
+
 
 /* RESPONSIVE*/
 /* TABLET VIEW */
