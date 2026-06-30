@@ -175,7 +175,7 @@ if (typeof ScrollReveal !== "undefined") {
 }
 
 // Atur tanggal target pendaftaran dibuka (12 Juli 2026 00:00:00)
-const tanggalBuka = new Date("July 12, 2026 00:00:00").getTime();
+const tanggalBuka = new Date("July 6, 2026 00:00:00").getTime();
 
 const hitungMundur = setInterval(function () {
   const sekarang = new Date().getTime();
